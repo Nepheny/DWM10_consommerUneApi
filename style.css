@@ -49,18 +49,43 @@ body {
   padding: 3vh 5vw;
   border-radius: 5px;
 }
-.spell-infos {
-  padding-left: 5vw;
+.passive-div {
   display: flex;
   flex-direction: column;
+}
+.spell-infos {
+  padding-left: 2vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title-h4 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.passive-p {
+  text-align: center;
+  padding: 0 5vw;
 }
 .spell-ul {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  list-style: none;
+  padding: 0 10px;
 }
 .spell {
-
+  width: 25%;
+  padding: 0 1vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.img-spell {
+  border-radius: 3px;
+}
+.champ-p {
+  text-align: justify;
 }
 #buttonList h1 {
   color: #fff;
@@ -82,11 +107,33 @@ body {
   justify-content: center;
   height: 15vh;
   align-items: center;
-  background-color: #2D385B;
+  background-image: url('imgs/header.png');
+}
+#a {
+  cursor: pointer;
+  color: #fff;
+  text-transform: uppercase;
+  font-family: 'Lato', sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  background-color: rgba(61,75,140,0.05);
+  margin: 5px;
+  list-style: none;
+  border-radius: 0.25em;
+  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+  0px 3px 1px -2px rgba(0, 0, 0, 0.12);
+  padding: 1em;
+}
+#a:hover {
+  background-color: rgba(61,75,140,0.5);
+  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2),
+  0px 8px 10px 1px rgba(0, 0, 0, 0.14),
+  0px 3px 14px 2px rgba(0, 0, 0, 0.12);
 }
 #resultList {
   width: 100vw;
-  height: 80vh;
+  height: 85vh;
   /* Change the color */
   background-color: rgba(61,75,140,0.1);
   overflow: scroll;

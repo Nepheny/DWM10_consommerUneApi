@@ -1,9 +1,9 @@
-const apiKey = "RGAPI-cbe0a889-18ae-445a-8f5c-7137d4885f50";
+const apiKey = "RGAPI-5015b3af-4159-432e-afe4-6f8ce0e3e550";
 
 $(document).ready(function() {
   if (localStorage.getItem('championList') == null) {
     $.ajax({
-      url: "https://na1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false",
+      url: "https://eun1.api.riotgames.com/lol/static-data/v3/champions?locale=en_US&dataById=false",
       type: "GET",
       headers: {
         "X-Riot-Token": apiKey,
@@ -44,7 +44,7 @@ $(document).ready(function() {
     $('.champion').on('click', function (e) {
       const champId = this.dataset.id;
       $.ajax({
-        url: "https://na1.api.riotgames.com/lol/static-data/v3/champions/" + champId + "?locale=en_US&champData=spells&tags=all",
+        url: "https://eun1.api.riotgames.com/lol/static-data/v3/champions/" + champId + "?locale=en_US&champData=spells&tags=all",
         type: "GET",
         headers: {
           "X-Riot-Token": apiKey,
@@ -96,6 +96,7 @@ $(document).ready(function() {
           //const passiveImgDiv = document.createElement('div');
           passiveParagraph.classList.add('passive-p');
           passiveTitle.classList.add('title-h4');
+          passivContainer.classList.add('passive-div');
           passiveTitle.innerHTML = namePassive;
           passiveParagraph.innerHTML = descPassive;
           //passiveImgDiv.classList.add('passive-img-div');
